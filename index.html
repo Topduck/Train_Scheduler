@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Sign-Up Today!</title>
+  <!-- Style CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+  <!-- Moment.js -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+  
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h1 class="text-center">Train Scheduler!</h1>
+    </div>
+	<!-- Current Train Schedule -->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-primary">
+  				<div class="panel-heading">
+    				<h3 class="panel-title"><strong>Train Schedule</strong></h3>
+  				</div>
+  				<div class="panel-body">
+  					<table class="table table-hover" id="trainTable">
+  						<thead>
+  							<tr>
+  								<th>Train Name</th>
+  								<th>Destination</th>
+  								<th>Frequency (min)</th>
+  								<th>Next Arrival</th>
+  								<th>Minutes Away</th>
+  							</tr>
+  						</thead>
+  						<tbody id="toSchedule">
+  						</tbody>
+					</table>
+  				</div>
+			</div>
+		</div>
+	</div>
+    <div class="row">
+
+      <!-- Sign-Up Card-->
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header">
+            Schedule a new train!
+          </div>
+
+          <div class="card-body">
+
+            <!-- Sign-up Form (note the various input "types")-->
+            <form role="form">
+              <div class="form-group row">
+                <label for="name-input">Train Name:</label>
+                <input class="form-control" id="trainNameinput" type="text">
+              </div>
+              <div class="form-group row">
+                <label for="email-input">Destination:</label>
+                <input class="form-control" id="destinationInput" type="text">
+              </div>
+              <div class="form-group row">
+                <label for="age-input">First Arrival:</label>
+                <input class="form-control" id="firstTimeinput" type="text">
+              </div>
+              <div class="form-group row">
+                <label for="age-input">Frequency of Arrival:</label>
+                <input class="form-control" id="frequencyInput" type="text">
+              </div>
+              
+              <button class="btn btn-default" id="addtrain" type="submit">Add Train</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="assets\javascript\app.js"></script>
+
+
+
+
+</body>
